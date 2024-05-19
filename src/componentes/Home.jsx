@@ -5,9 +5,14 @@ import { MeunavBar } from "./MeunavBar";
 function Home (){
     return (
         <>
-        <MeunavBar></MeunavBar>
+        <div id="root">
+            <div className="container">
+                <MeunavBar></MeunavBar>
+            </div>
         <CarouselComponentes></CarouselComponentes>
         <ListaProdutos></ListaProdutos>
+        </div>
+
         </>
 
 

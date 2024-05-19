@@ -54,7 +54,8 @@ function ListaProdutos() {
     return (
         <>
             <Row className="justify-content-md-center">
-                <Col md={2}>
+                {/* <Col md={2}> */}
+                <Col md={3}> 
                     <h1>Lista Produtos</h1>
                 </Col>
             </Row>

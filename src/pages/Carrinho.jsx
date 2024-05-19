@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Button, Col, Row, Table } from "react-bootstrap";
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
 import { MeunavBar } from "../componentes/MeunavBar";
+import "../assets/css/divListaProdutosCarrinho.css";
 
 function Carrinho() {
   const { listaProdutosCarrinho, removerProduto } = useContext(CarrinhoContext);
@@ -16,10 +17,12 @@ function Carrinho() {
 
   return (
     <>
-      <MeunavBar/>
+        <div className="divListaProdutosCarrinho">
+            <MeunavBar/>
+        </div>
         <Row className="justify-content-md-center">
           <Col md={6}>
-            <h1>Lista de produtos carrinho </h1>
+            <h1 className="tituloListaProdutosCarrinho">Lista de produtos carrinho </h1>
           </Col>
         </Row>
         <Row>
@@ -37,6 +40,7 @@ function Carrinho() {
               <tbody>
                 {produtosCarrinho.map((produtoCarrinho, index) => {
                   return (
+                  
                     <tr>
                       <td> {produtoCarrinho.idProduto}</td>
                       <td> {produtoCarrinho.nomeProduto}</td>
@@ -53,8 +57,11 @@ function Carrinho() {
                         </Button>
                       </td>
                     </tr>
+                    
+                   
                   );
                 })}
+                
               </tbody>
             </Table>
           </Col>

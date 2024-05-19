@@ -1,0 +1,48 @@
+/* .carousel-item {
+    background-position: center !important;
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+    min-width: 50% !important;
+    height: 350px !important;
+} */
+/* .img {
+    overflow-clip-margin: content-box !important;
+    overflow: clip;
+    min-width: 70%;
+    height: 300px;
+  } */
+
+
+/* .w-100 {
+    width: 100% !important;
+}
+.d-block {
+    display: block !important;
+}
+img, svg {
+    vertical-align: middle;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+} */
+
+/*  https://www.youtube.com/watch?v=3N2asskSgPg 
+https://getbootstrap.com.br/docs/4.1/components/navbar/
+*/
+
+.carousel-item {
+    height: 20em;
+}
+.w-100 {
+    width: 100% !important;
+}
+.d-block {
+    display: block !important;
+}
+.img {
+    overflow-clip-margin: content-box !important;
+    overflow: clip;
+    min-width: 70%;
+    height: 300px;
+  }
