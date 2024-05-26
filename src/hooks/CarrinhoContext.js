@@ -3,6 +3,43 @@ import { toast } from "react-toastify";
 
 export const CarrinhoContext = createContext();
 
+// chamada contexto provider app js
+
+// Criando funcṍes para ser usado “globalmente” 
+//    useState para gerenciar os produto do carrinho
+//    function salvarprodutos Salvar no localStorage
+//    adicionar carrinho Adicionar no items
+
+// return variaveis funcoes uso global
+//    listaProdutosCarrinho , adicionarCarrinho
+
+//   cardproduto funcoes para ser usado globalmente
+
+// Adicionando função para remover produto do carrinho:
+//    function removerProduto() Utilizando filter() para filtrar dados para tirar da lista de produtos do carrinho 
+//    return removerproduto
+
+// Validar se o produto já está no carrinho:
+/*
+     const qtdProdutosNoCarrinho = listaProdutosCarrinho.filter(
+      (item) => item.idProduto == produto.idProduto
+    );
+    if (qtdProdutosNoCarrinho.length > 0) {
+      return toast.error("Produto já esta no seu carrinho", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+*/
+
+// e cardproduto  validar se usuario esta logado no sistema antes de adicionar no carrinho
+
 function CarrinhoContextProvider({ children }) {
   const [listaProdutosCarrinho, setListaProdutosCarrinho] = useState([]);
 

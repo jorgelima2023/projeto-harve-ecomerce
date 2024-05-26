@@ -5,6 +5,10 @@ import { Login } from "../componentes/Login";
 import { Carrinho } from "../pages/Carrinho";
 //import { Produto } from "../componentes/ListaProdutos/Produto";
 
+// rotas
+// login, home
+//   Adicionar componente Carrinho nas rotas
+
 export function RouteApp() {
     return (
         <BrowserRouter>

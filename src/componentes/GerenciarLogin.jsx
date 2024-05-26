@@ -1,7 +1,38 @@
 import { useContext, useEffect, useState } from "react";
 import { Badge, Button, Col, Row } from "react-bootstrap";
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
+import { Login } from "./Login";
 
+// gerenciar sessao de usuario:
+//     const token = localStorage.getItem("token");
+//     const nomeUsuario = localStorage.getItem("nomeUsuario");
+//     const emailUsario = localStorage.getItem("emailUsario");
+
+// chamar a funcao quando renderizar o componente
+// useEffect(() => {
+//   pegarDadosLocalStorage();
+
+// !token quando nao tem token no localstorage aparece o botao de Login
+
+// return
+// quando login sucesso e tem token no localstorage, mostrar dados usuario
+// mostrar botao sair
+//    funcao removerDadosLocalStorage()  zerar dados localstorage
+
+// quando nao logado aparecer botao login
+// e se sucesso logado aparecer botao sair
+
+// Gerenciar carrinho de compra:
+//      const [numeroProdutosCarrinho, setNumeroProdutosCarrinho] = useState(0);
+//      const { listaProdutosCarrinho } = useContext(CarrinhoContext);
+//      useEffect(()  
+
+// Adicionando carrinho com a quantidade de produtos:
+//     <a href="/carrinho">
+
+// gerenciar se produto ja esta no carrinho, carrinhoContext js
+
+</a>
 function GerenciarLogin() 
 {
   const [token, setToken] = useState(null);

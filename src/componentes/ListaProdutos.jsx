@@ -54,7 +54,8 @@ function ListaProdutos() {
     return (
         <>
             <Row className="justify-content-md-center">
-                {/* <Col md={2}> */}
+                {/* <Col md={2}> para dar margin entre os cards
+                      e utilizar row e col para os cards focarem um do lado do outro */}
                 <Col md={3}> 
                     <h1>Lista Produtos</h1>
                 </Col>

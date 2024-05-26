@@ -18,6 +18,8 @@ import CarrinhoContextProvider from "./hooks/CarrinhoContext";
 //     );
 //   }
 
+// utilizar contexto provider 
+
 function App() {
     return (
       

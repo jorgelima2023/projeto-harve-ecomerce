@@ -12,6 +12,21 @@ import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import "../assets/css/login.css";
 
+// componente login buscar um form com validacao bootstrap , 
+// forms , validation 
+
+// localstorage adicionar dados usuario no navegador (nome, email, token)
+//   token identifica se logado
+
+// usando usestate para guardar email e senha
+//    const [email, setEmail] = useState("");
+//    const [senha, setSenha] = useState("");
+//    useState(false);  validade do formulario
+//    hooks useNavigate p/ navegar entre as telas sem precisar tag <a> 
+//          let navigate = useNavigate();
+
+// componente gerenciar login, adicionado ao menu 
+
 function Login() {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState("");
@@ -53,40 +68,49 @@ function Login() {
   }
   
   async function submitForm(event) {
-    event.preventDefault();
+    event.preventDefault();  // parar o evento do formulario
     setValidated(true);
 
     const form = new FormData();
-    form.append("email", email);
-    form.append("password", senha);
-    const options = {
-      method: "POST",
+    form.append("email", email);    // adicionando dados form que vem do useState
+    form.append("password", senha); // adicionando dados form que vem do useState
+    const options = {               
+      method: "POST",               // configuracao da requisicao
       mode: "cors",
       body: form,
     };
 
+    // mensagemDeSucesso, mensagemDeErro criando a funcao para dar alert
+    // utl da api com endpoint utilizado
     try {
       const response = await fetch(
         "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
         options
       );
       mensagemDeSucesso("Logado com sucesso");
-      const data = await response.json();
+      const data = await response.json();    // variavel data recebe os dados da api
       const token = data.token
       const nomeUsuario = data.user.name
       const emailUsario = data.user.email
 
+      // localstorage salvar dados que vem da api no endpoint de login atraves set
       localStorage.setItem('token', token)
       localStorage.setItem('nomeUsuario', nomeUsuario)
       localStorage.setItem('emailUsario', emailUsario)
 
-      navigate("/");  // chamar pagina principal HOME ...
+      navigate("/");  // chamar pagina principal HOME, sucesso login usando useNavigate
     } catch (error) {
       mensagemDeErro("Não foi possivel realizar login");
     }
   }
 
   return (
+    //  bootstrap , login.css , image src... form 
+    //   onChange={onchangeEmail} usando a funcao que manipula o email
+    //   onChange={onchangeSenha} usando a funcao que manipula a senha
+    //   <Button type="submit" size="lg">  botao que gera o submit do form
+    //   <Form noValidate validated={validated} onSubmit={submitForm}> usando onSubmit form envia dados
+    //   async function  fazendo a requisicao na api para fazer login usando fetch
     <Container>
       <Row style={{ marginTop: "13%" }}>
         <Col md={1}></Col>
