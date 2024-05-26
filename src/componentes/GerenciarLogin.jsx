@@ -32,7 +32,7 @@ import { Login } from "./Login";
 
 // gerenciar se produto ja esta no carrinho, carrinhoContext js
 
-</a>
+
 function GerenciarLogin() 
 {
   const [token, setToken] = useState(null);
